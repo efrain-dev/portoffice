@@ -1,0 +1,36 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+header {
+
+    width: 100%;
+    min-height: 56px;
+
+}
+footer{
+    width: 100%;
+}
+
+.h-screen{
+    height: 100vh;
+
+
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: gray;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+
