@@ -1,0 +1,31 @@
+runtime: php72
+
+handlers:
+- url: /(.*\.(gif|png|jpg|css|js))$
+  static_files: public/\1
+  upload: public/.*\.(gif|png|jpg|css|js)$
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+runtime_config:
+    document_root: public
+    enable_stackdriver_integration: true
+
+
+env_variables:
+  ## Put production environment variables here.
+  LOG_CHANNEL: stackdriver
+  APP_KEY:esta es la key que generas con artisna
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  SESSION_DRIVER: cookie
+  ##MYSQL_DNS: mysql:dbname=nobmredetubd;unix_socket=linkdetuinstancia:nombredetuinstanciasql
+  DB_DATABASE: 
+  DB_USERNAME:
+  DB_PASSWORD: 
+  DB_SOCKET: "ellinkdetuinstanciasql"
+
+beta_settings:
+  cloud_sql_instances: "nombretetuinstancia"
